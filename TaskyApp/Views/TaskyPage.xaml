@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskyApp.Views.TaskyPage"
+             xmlns:contracts="clr-namespace:TaskyApp.Contracts;assembly=TaskyApp.Contracts"
+             Title="{Binding Title}"
+             x:DataType="contracts:ITaskyViewModel">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Margin="0,10,0,0" Text="Get Location"
+                            Command="{Binding GetLocationCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+                    <Button Margin="0,10,0,0" Text="Get Todos"
+                            Command="{Binding GetTodosCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+                </StackLayout>
+                <BoxView HeightRequest="1" BackgroundColor="Blue" Margin="0,5,0,5" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Margin="0,10,0,0" Text="Start Task"
+                            Command="{Binding StartTaskCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+
+                    <Button Margin="0,10,0,0" Text="Stop Task"
+                            Command="{Binding StopTaskCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+                </StackLayout>
+
+                <BoxView HeightRequest="1" BackgroundColor="Blue" Margin="0,5,0,5" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Margin="0,10,0,0" Text="Start Worker"
+                            Command="{Binding StartWorkerCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+
+                    <Button Margin="0,10,0,0" Text="Stop Worker"
+                            Command="{Binding StopWorkerCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+                </StackLayout>
+
+                <BoxView HeightRequest="1" BackgroundColor="Blue" Margin="0,5,0,5" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Margin="0,10,0,0" Text="Start Service"
+                            Command="{Binding StartGpsServiceCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+
+                    <Button Margin="0,10,0,0" Text="Stop Service"
+                            Command="{Binding StopGpsServiceCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

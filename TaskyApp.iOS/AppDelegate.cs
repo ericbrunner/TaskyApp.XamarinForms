@@ -5,10 +5,13 @@ using System.Linq;
 using Foundation;
 using Microsoft.Extensions.DependencyInjection;
 using TaskyApp.Contracts;
+using TaskyApp.Effects;
 using TaskyApp.iOS.Tasky;
 using TaskyApp.Tasky;
 using UIKit;
+using Xamarin.Forms;
 
+[assembly:ResolutionGroupName(FocusEffect.ResolutionGroupName)]
 namespace TaskyApp.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 

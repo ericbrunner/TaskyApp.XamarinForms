@@ -7,8 +7,11 @@ using Android.OS;
 using Microsoft.Extensions.DependencyInjection;
 using TaskyApp.Contracts;
 using TaskyApp.Droid.Tasky;
+using TaskyApp.Effects;
 using TaskyApp.Tasky;
+using Xamarin.Forms;
 
+[assembly:ResolutionGroupName(FocusEffect.ResolutionGroupName)]
 namespace TaskyApp.Droid
 {
     [Activity(

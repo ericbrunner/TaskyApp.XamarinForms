@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="CustomControls\" />
+    <Folder Include="Effects\" />
     <Folder Include="Tasky\Messages\" />
   </ItemGroup>
 

@@ -6,6 +6,7 @@
              xmlns:contracts="clr-namespace:TaskyApp.Contracts;assembly=TaskyApp.Contracts"
              xmlns:customControls="clr-namespace:TaskyApp.CustomControls;assembly=TaskyApp"
              xmlns:effects="clr-namespace:TaskyApp.Effects;assembly=TaskyApp"
+             xmlns:behaviors="clr-namespace:TaskyApp.Behaviors;assembly=TaskyApp"
              Title="{Binding Title}"
              x:DataType="contracts:ITaskyViewModel">
 
@@ -79,6 +80,12 @@
                     <Entry.Effects>
                         <effects:FocusEffect/>
                     </Entry.Effects>
+                </Entry>
+
+                <Entry Text="Enter a System.Double value">
+                    <Entry.Behaviors>
+                        <behaviors:NumericValidationBehavior/>
+                    </Entry.Behaviors>
                 </Entry>
             </StackLayout>
         </ScrollView>
